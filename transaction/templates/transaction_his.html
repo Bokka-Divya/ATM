@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5">
+
+<div class="container mt-5" style="background-color:skyblue; height:100vh;">
+    <h2 class="highlight_text" style="background-color: blue;">Welcome</h2>
+    <br><br><br>
+
+ 
+    {% for transaction in transactions %}
+        <ul>
+        <li >{{forloop.counter}}----{{transaction.date}}---{{transaction.amount}}----{{transaction.transaction_type}}</li>
+    </ul>
+    {% empty %}
+        <h2 class="text-center" style="color:blue;">No transactions found</h2>
+
+    {% endfor %}
+ 
+</div>
+
+</div>
+{% endblock %}

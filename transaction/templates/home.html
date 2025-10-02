@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-5" style="background-color:skyblue; height:100vh;">
+    <h2 class="highlight_text" style="background-color: blue;">Welcome<br>
+                                   Please select your Transaction type</h2>
+    <br><br><br>
+        <div style="align-items: center;text-align: center;padding:10px;text-decoration-color:blue;">
+            <a href="{% url 'deposit' %}" class="btn btn-primary w-50" >Deposit</a><br><br>
+            <a href="{% url 'transaction_his' %}" class="btn btn-primary w-50">Mini Statement</a><br><br>
+            <a href="{% url 'withdrawl' %}" class="btn btn-primary w-50">Withdrawl</a><br><br>
+            <a href="{% url 'check_balance' %}" class="btn btn-primary w-50">Check Balance</a><br><br>
+            <a href="{% url 'pin_generation' %}" class="btn btn-primary w-50">Pin Generation</a>
+        </div>
+    
+</div>
+
+{% endblock %}
