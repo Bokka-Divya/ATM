@@ -60,7 +60,7 @@ def withdraw_amount(request,account_number,amount):# to confirm pin for that acc
         pin=request.POST.get('pin')
         try:
             if  pin!=str(account.pin):
-                messages.error(request,"Invalid Pin")
+                messages.error(request,"Invalid Account number or Pin")
                 return render(request,"pin.html")
             else:
                 account.balance-=float(amount)
